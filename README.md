@@ -21,3 +21,5 @@
 
 ### 滑动窗口
 - [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
+- [567. 字符串的排列](https://leetcode.cn/problems/permutation-in-string/)
+- [字符串的包含](https://leetcode.cn/problems/permutation-in-string/)
