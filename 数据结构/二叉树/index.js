@@ -23,6 +23,25 @@ let createTree = function(...nodes){
     }
     return root
 }
+/**
+ * 
+ * @param  {...any} nodes 
+ * 1.使用队列来维护节点
+ * 2.使用一个指针来控制插入节点
+ */
+// function createTree(...nodes) {
+//     let root=new TreeNode(nodes[0]);
+//     let queue=[],i=1;
+//     queue.push(root);
+//     while(queue.length){
+//         let node=queue.shift();
+//         if(node&&i<nodes.length){
+//             queue.push(insertLNode(node,nodes[i]))
+//             queue.push(insertRNode(node,nodes[i+1]))
+//         }
+//         i+=2;
+//     }
+// }
 
 // 插入左节点
 let insertLNode = function(root, data){
@@ -39,17 +58,51 @@ let insertRNode = function(root, data){
         return root.right
     }
 }
-
+let root = createTree(0,1,2,3,4,5,6,7,8,9)
 // 递归遍历
-function tarverse(root){
-    // 前序遍历
-    root.left ? tarverse(root.left):''
-    //中序遍历
-    root.right ? tarverse(root.right):''
-    //后序遍历
-    console.log(root)
+//前序遍历
+function ProOrderTraverse(root){
+    if (root == null) return;
+
+    console.log(root.value);
+
+    ProOrderTraverse(root.left);
+
+    ProOrderTraverse(root.right);
+}
+
+//中序遍历
+function InOrderTraverse(root) {
+    if (root == null) return;
+
+    InOrderTraverse(root.left);
+
+    console.log(root.value);
+
+    InOrderTraverse(root.right);
 
 }
-let root = createTree(1,2,3,4,5,null,6,null,7)
 
-tarverse(root)
+//后序遍历
+function PostOrderTraverse(root) {
+    if (root == null) return;
+
+    PostOrderTraverse(root.left);
+
+    PostOrderTraverse(root.right);
+
+    console.log(root.value);
+
+}
+
+//输出顺序：0->1->3->7->8->4->9->2->5->6
+ProOrderTraverse(root)
+
+//输出顺序：7->3->8->1->9->4->0->5->2->6
+InOrderTraverse(root)
+
+//输出顺序：7->8->3->9->4->1->5->6->2->0
+PostOrderTraverse(root)
+
+
+
