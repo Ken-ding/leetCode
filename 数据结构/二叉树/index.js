@@ -96,12 +96,15 @@ function PostOrderTraverse(root) {
 }
 
 //输出顺序：0->1->3->7->8->4->9->2->5->6
+//根左右
 ProOrderTraverse(root)
 
 //输出顺序：7->3->8->1->9->4->0->5->2->6
+//左根右
 InOrderTraverse(root)
 
 //输出顺序：7->8->3->9->4->1->5->6->2->0
+//左右根
 PostOrderTraverse(root)
 
 
