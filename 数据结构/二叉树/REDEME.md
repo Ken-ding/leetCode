@@ -1,6 +1,6 @@
 # 二叉树
 ## 创建二叉树
-### 思路
+### 代码
 - 
 ```
 function TreeNode(value){
@@ -58,9 +58,10 @@ console.log(root)
 
 ![alt](https://img.php.cn/upload/article/000/000/024/a607e0d2e82567a1c6e884cd15e5e0e5-2.png)
 
-代码
+### 代码
 
 ```
+// 递归遍历
 //前序遍历
 function ProOrderTraverse(root){
     if (root == null) return;
@@ -71,9 +72,6 @@ function ProOrderTraverse(root){
 
     ProOrderTraverse(root.right);
 }
-
-//输出顺序：0->1->3->7->8->4->9->2->5->6
-ProOrderTraverse(root)
 
 //中序遍历
 function InOrderTraverse(root) {
@@ -87,9 +85,6 @@ function InOrderTraverse(root) {
 
 }
 
-//输出顺序：7->3->8->1->9->4->0->5->2->6
-InOrderTraverse(root)
-
 //后序遍历
 function PostOrderTraverse(root) {
     if (root == null) return;
@@ -102,85 +97,59 @@ function PostOrderTraverse(root) {
 
 }
 
+//输出顺序：0->1->3->7->8->4->9->2->5->6
+//根左右
+// ProOrderTraverse(root)
+
+//输出顺序：7->3->8->1->9->4->0->5->2->6
+//左根右
+// InOrderTraverse(root)
+
 //输出顺序：7->8->3->9->4->1->5->6->2->0
-PostOrderTraverse(root)
-
+//左右根
+// PostOrderTraverse(root)
 ```
+
 ## 非递归遍历
-- 深度优先遍历（主要利用栈的先进后出）
-- 广度优先遍历（主要利用队列的先进先出
+### 代码
 ```
-//深度优先非递归
-
-function DepthFirstSearch(biTree) {
-
+//非递归遍历
+//深度优先遍历（利用栈的先进后出）
+//深度优先主要是利用栈，先压右子树，再压左子树
+function DepthFirstSearch(root) {
     let stack = [];
-
-    stack.push(biTree);
-
- 
-
+    stack.push(root);
     while (stack.length != 0) {
-
         let node = stack.pop();
-
-        console.log(node.data);
-
-        if (node.rChild) {
-
-            stack.push(node.rChild);
-
+        console.log(node.value);
+        if (node.right) {
+            stack.push(node.right);
         }
-
-        if (node.lChild) {
-
-            stack.push(node.lChild);
-
+        if (node.left) {
+            stack.push(node.left);
         }
-
- 
-
     }
-
- 
-
 }
 
- 
+// DepthFirstSearch(root)
 
- 
-
-//广度优先非递归
-
-function BreadthFirstSearch(biTree) {
-
+//广度优先遍历（）root
+function BreadthFirstSearch(root) {
     let queue = [];
-
-    queue.push(biTree);
-
+    queue.push(root);
     while (queue.length != 0) {
-
         let node = queue.shift();
-
-        console.log(node.data);
-
-        if (node.lChild) {
-
-            queue.push(node.lChild);
-
+        console.log(node.value);
+        if (node.left) {
+            queue.push(node.left);
         }
-
-        if (node.rChild) {
-
-            queue.push(node.rChild);
-
+        if (node.right) {
+            queue.push(node.right);
         }
-
     }
-
- 
-
 }
+
+BreadthFirstSearch(root)
 ```
 深度优先主要是利用栈，先压右子树，再压左子树
 广度优先主要利用队列，先入左子树，再入右子树

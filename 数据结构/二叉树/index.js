@@ -97,15 +97,52 @@ function PostOrderTraverse(root) {
 
 //输出顺序：0->1->3->7->8->4->9->2->5->6
 //根左右
-ProOrderTraverse(root)
+// ProOrderTraverse(root)
 
 //输出顺序：7->3->8->1->9->4->0->5->2->6
 //左根右
-InOrderTraverse(root)
+// InOrderTraverse(root)
 
 //输出顺序：7->8->3->9->4->1->5->6->2->0
 //左右根
-PostOrderTraverse(root)
+// PostOrderTraverse(root)
 
+//非递归遍历
+//深度优先遍历（利用栈的先进后出）
+//深度优先主要是利用栈，先压右子树，再压左子树
+function DepthFirstSearch(root) {
+    let stack = [];
+    stack.push(root);
+    while (stack.length != 0) {
+        let node = stack.pop();
+        console.log(node.value);
+        if (node.right) {
+            stack.push(node.right);
+        }
+        if (node.left) {
+            stack.push(node.left);
+        }
+    }
+}
+
+// DepthFirstSearch(root)
+
+//广度优先遍历（）root
+function BreadthFirstSearch(root) {
+    let queue = [];
+    queue.push(root);
+    while (queue.length != 0) {
+        let node = queue.shift();
+        console.log(node.value);
+        if (node.left) {
+            queue.push(node.left);
+        }
+        if (node.right) {
+            queue.push(node.right);
+        }
+    }
+}
+
+BreadthFirstSearch(root)
 
 
