@@ -73,6 +73,10 @@ function ProOrderTraverse(root){
     ProOrderTraverse(root.right);
 }
 
+//输出顺序：0->1->3->7->8->4->9->2->5->6
+//根左右
+// ProOrderTraverse(root)
+
 //中序遍历
 function InOrderTraverse(root) {
     if (root == null) return;
@@ -85,6 +89,10 @@ function InOrderTraverse(root) {
 
 }
 
+//输出顺序：7->3->8->1->9->4->0->5->2->6
+//左根右
+// InOrderTraverse(root)
+
 //后序遍历
 function PostOrderTraverse(root) {
     if (root == null) return;
@@ -96,14 +104,6 @@ function PostOrderTraverse(root) {
     console.log(root.value);
 
 }
-
-//输出顺序：0->1->3->7->8->4->9->2->5->6
-//根左右
-// ProOrderTraverse(root)
-
-//输出顺序：7->3->8->1->9->4->0->5->2->6
-//左根右
-// InOrderTraverse(root)
 
 //输出顺序：7->8->3->9->4->1->5->6->2->0
 //左右根
@@ -130,10 +130,10 @@ function DepthFirstSearch(root) {
         }
     }
 }
-
+//输出顺序：0->1->3->7->8->4->9->2->5->6
 // DepthFirstSearch(root)
 
-//广度优先遍历（）root
+//广度优先遍历
 function BreadthFirstSearch(root) {
     let queue = [];
     queue.push(root);
@@ -149,9 +149,8 @@ function BreadthFirstSearch(root) {
     }
 }
 
-BreadthFirstSearch(root)
+//输出顺序：0->1->2->3->4->5->6->7->8->9
+// BreadthFirstSearch(root)
 ```
 深度优先主要是利用栈，先压右子树，再压左子树
 广度优先主要利用队列，先入左子树，再入右子树
-
-深度优先的遍历结果与前序遍历相同ABDGHCEIF，广度优先的遍历结果是 ABCDEFGHI

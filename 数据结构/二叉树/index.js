@@ -23,25 +23,6 @@ let createTree = function(...nodes){
     }
     return root
 }
-/**
- * 
- * @param  {...any} nodes 
- * 1.使用队列来维护节点
- * 2.使用一个指针来控制插入节点
- */
-// function createTree(...nodes) {
-//     let root=new TreeNode(nodes[0]);
-//     let queue=[],i=1;
-//     queue.push(root);
-//     while(queue.length){
-//         let node=queue.shift();
-//         if(node&&i<nodes.length){
-//             queue.push(insertLNode(node,nodes[i]))
-//             queue.push(insertRNode(node,nodes[i+1]))
-//         }
-//         i+=2;
-//     }
-// }
 
 // 插入左节点
 let insertLNode = function(root, data){
@@ -124,10 +105,10 @@ function DepthFirstSearch(root) {
         }
     }
 }
-
+//输出顺序：0->1->3->7->8->4->9->2->5->6
 // DepthFirstSearch(root)
 
-//广度优先遍历（）root
+//广度优先遍历
 function BreadthFirstSearch(root) {
     let queue = [];
     queue.push(root);
@@ -143,6 +124,7 @@ function BreadthFirstSearch(root) {
     }
 }
 
+//输出顺序：0->1->2->3->4->5->6->7->8->9
 // BreadthFirstSearch(root)
 
 
