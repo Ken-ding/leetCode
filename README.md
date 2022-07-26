@@ -28,4 +28,20 @@
 - [733.图像渲染](https://leetcode.cn/problems/flood-fill/)
 - [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
 - [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees/)
+- [116. 填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
+- [542. 01 矩阵](https://leetcode.cn/problems/01-matrix/)
+- [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges/)
+
+### 递归/回溯
+- [77. 组合](https://leetcode.cn/problems/combinations/)
+- [46. 全排列](https://leetcode.cn/problems/permutations/)
+- [784. 字母大小写全排列](https://leetcode.cn/problems/letter-case-permutation/)
+
+### 动态规划
+- [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
+- [198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
+- [120. 三角形最小路径和](https://leetcode.cn/problems/triangle/)
+
+
+
 
