@@ -58,17 +58,24 @@ var connect = function(root) {
     let queen=[];
     queen.push(root);
     while(queen.length){
-        console.log(node.val);
-        for (let i = 0; i < queen.length; i++) {
+        const size=queen.length
+        for (let i = 0; i < size; i++) {
             const node=queen.shift();
+
+            if (i < size - 1) {
+                node.next = queen[0];
+            }
+
             if(node.left){
                 queen.push(node.left)
             }
+
             if(node.right){
                 queen.push(node.right)
             }
         }
     }
+    return root;
 };
 
 connect(root)

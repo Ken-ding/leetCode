@@ -42,6 +42,10 @@
 - [198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
 - [120. 三角形最小路径和](https://leetcode.cn/problems/triangle/)
 
+### 位运算
+- [231. 2 的幂](https://leetcode.cn/problems/power-of-two/)
+- [191. 位1的个数](https://leetcode.cn/problems/number-of-1-bits/)
+
 
 
 
