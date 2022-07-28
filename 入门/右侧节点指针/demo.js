@@ -51,7 +51,7 @@ let root = createTree(...[1,2,3,4,5,6,7]);
  * @param {Node} root
  * @return {Node}
  */
-var connect = function(root) {
+var connect1 = function(root) {
     if (root === null) {
         return root;
     }
@@ -77,5 +77,19 @@ var connect = function(root) {
     }
     return root;
 };
+
+var connect = function(root) {
+    if (root === null) {
+        return root;
+    }
+    let node=root;
+    while (node) {
+        node.left.next=node.right;
+        if(node.next){
+            node.right.next=node.next.left
+        }
+        node=node.left
+    }
+}
 
 connect(root)

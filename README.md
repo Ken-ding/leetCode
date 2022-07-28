@@ -45,6 +45,8 @@
 ### 位运算
 - [231. 2 的幂](https://leetcode.cn/problems/power-of-two/)
 - [191. 位1的个数](https://leetcode.cn/problems/number-of-1-bits/)
+- [190. 颠倒二进制位](https://leetcode.cn/problems/reverse-bits/)
+- [136. 只出现一次的数字](https://leetcode.cn/problems/single-number/)
 
 
 
