@@ -47,10 +47,7 @@ let insertRNode = function(root, data){
 }
 let root = createTree(...[1,2,3,4,5,6,7]);
 
-/**
- * @param {Node} root
- * @return {Node}
- */
+//层级遍历
 var connect1 = function(root) {
     if (root === null) {
         return root;
@@ -78,18 +75,24 @@ var connect1 = function(root) {
     return root;
 };
 
+//借用next
 var connect = function(root) {
     if (root === null) {
         return root;
     }
     let node=root;
     while (node) {
+        if(!node.left)break
         node.left.next=node.right;
-        if(node.next){
+        let origin=node;
+        while (node.next) {
+            node.next.left.next=node.next.right
             node.right.next=node.next.left
+            node=node.next;
         }
-        node=node.left
+        node=origin.left
     }
+    return root;
 }
 
 connect(root)
