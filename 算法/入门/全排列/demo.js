@@ -2,8 +2,8 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-let nums = [1, 2, 3];
-var permute = function (nums) {
+// let nums = [1, 2, 3];
+var permute1 = function (nums) {
   // 保存最终的结果
   const res = [];
   // 用来记录每一步排列中，数字是否已经使用
@@ -22,7 +22,7 @@ var permute = function (nums) {
         dfs(nums, index + 1, p1);
         // 这一轮使用后，回溯，下一轮还可以使用
         p.pop();
-        
+
         used[i] = false;
       }
     }
@@ -32,4 +32,18 @@ var permute = function (nums) {
   return res;
 };
 
-permute(nums);
+// permute1(nums);
+
+let nums = [1, 2, 3,4];
+function permute(nums) {
+  let l=nums.length;
+  function dfs(nums,i) {
+    if(i===l)return;
+    console.log(nums[i]);
+    dfs(nums,i+1)
+  }
+  dfs(nums,0)
+}
+
+permute(nums)
+
