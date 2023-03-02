@@ -48,6 +48,11 @@
 - [190. 颠倒二进制位](https://leetcode.cn/problems/reverse-bits/)
 - [136. 只出现一次的数字](https://leetcode.cn/problems/single-number/)
 
+## 基础
+
+### 二分查找
+- [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/?envType=study-plan&id=suan-fa-ji-chu&plan=algorithms&plan_progress=fqoiscr)
+
 
 
 
