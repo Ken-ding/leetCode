@@ -3,9 +3,9 @@
  * @param {number} target
  * @return {number[]}
  */
-let nums = [1, 5];
-let target = 5;
-var searchRange = function (nums, target) {
+let nums = [5, 7, 7, 8, 8, 10];
+let target = 4;
+var searchRange1 = function (nums, target) {
   let left = 0,
     right = nums.length - 1;
   while (left <= right) {
@@ -17,4 +17,6 @@ var searchRange = function (nums, target) {
   return [left, right];
 };
 
-searchRange(nums, target);
+// searchRange1(nums);
+
+var searchRange = function (nums, target) {
