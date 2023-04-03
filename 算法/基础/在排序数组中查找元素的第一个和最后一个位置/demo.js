@@ -20,39 +20,3 @@ var searchRange1 = function (nums, target) {
 // searchRange1(nums);
 
 var searchRange = function (nums, target) {
-  function binarySearch(nums, target, rule) {
-    let left = 0,
-      right = nums.length - 1;
-    while (left <= right) {
-      let half = Math.floor((left + right) / 2);
-      if (rule) {
-        if (nums[half - 1] < target) {
-          left = half;
-          if (nums[half] === target) {
-            return half;
-          }
-        } else {
-          right = half;
-        }
-      } else {
-        if (nums[half + 1] > target) {
-          right = half;
-          if (nums[half] === target) {
-            return half;
-          }
-        } else {
-          left = half;
-        }
-      }
-    }
-
-    return -1;
-  }
-  let leftIndex = binarySearch(nums, target, true);
-  let rightIndex = binarySearch(nums, target, false);
-  return [leftIndex, rightIndex];
-};
-
-searchRange(nums, 8);
-
-
